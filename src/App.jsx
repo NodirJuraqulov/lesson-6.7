@@ -51,7 +51,7 @@ const App = () => {
           </Route>
           <Route path='korsatkichlarim' element={<Korsatkichlarim/>}/>
           <Route path='reyting' element={<Reyting/>}/>
-          <Route path='dokon' element={<Dokon/>}/>
+          {/* <Route path='dokon' element={<Dokon/>}/> */}
           <Route path='qoshimcha' element={<Qoshimcha/>}/>
           <Route path='sozlamalar' element={<Sozlamalar/>}/>
         </Route>
