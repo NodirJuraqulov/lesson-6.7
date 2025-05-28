@@ -6,4 +6,4 @@ const Korsatkichlarim = () => {
   )
 }
 
-export default Korsatkichlarim
+export default React.memo(Korsatkichlarim)

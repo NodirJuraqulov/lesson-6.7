@@ -6,4 +6,4 @@ const Qoshimcha = () => {
   )
 }
 
-export default Qoshimcha
+export default React.memo(Qoshimcha)

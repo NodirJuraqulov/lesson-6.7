@@ -20,4 +20,4 @@ const Guruhlarim = () => {
   )
 }
 
-export default Guruhlarim
+export default React.memo(Guruhlarim)

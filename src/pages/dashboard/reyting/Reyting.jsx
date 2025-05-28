@@ -6,4 +6,4 @@ const Reyting = () => {
   )
 }
 
-export default Reyting
+export default React.memo(Reyting)

@@ -27,4 +27,4 @@ const SkeletonDetail = () => {
   );
 };
 
-export default SkeletonDetail;
+export default React.memo(SkeletonDetail)

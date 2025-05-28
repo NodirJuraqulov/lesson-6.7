@@ -6,4 +6,4 @@ const Sozlamalar = () => {
   )
 }
 
-export default Sozlamalar
+export default React.memo(Sozlamalar)

@@ -34,4 +34,4 @@ const Tugagan = () => {
   );
 };
 
-export default Tugagan;
+export default React.memo(Tugagan)
