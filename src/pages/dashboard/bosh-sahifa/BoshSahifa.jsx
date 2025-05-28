@@ -6,4 +6,4 @@ const BoshSahifa = () => {
   )
 }
 
-export default BoshSahifa
+export default React.memo(BoshSahifa)

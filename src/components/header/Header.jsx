@@ -18,14 +18,8 @@ const Header = () => {
             <NavLink className={"header-link text-xl"} to={"/"}>
               Home
             </NavLink>
-            <NavLink className={"header-link text-xl"} to={"/recipes"}>
-              Recipes
-            </NavLink>
             <NavLink className={"header-link text-xl"} to={"/users"}>
               Users
-            </NavLink>
-            <NavLink className={"header-link text-xl"} to={"/posts"}>
-              Posts
             </NavLink>
             <NavLink className={"header-link text-xl"} to={"/login"}>
               Login

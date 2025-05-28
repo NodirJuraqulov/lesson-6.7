@@ -79,28 +79,6 @@ const Dashboard = () => {
       </div>
       <div className="flex-1 ">
         <div className="w-full px-10 flex items-center justify-end gap-30 h-16 bg-slate-900">
-          <div className="flex gap-10 items-center">
-            <img className="w-6 h-6 sm:hidden" src={menu} alt="hamburger" />
-
-            <div className="hidden text-white sm:flex gap-10 items-center">
-              <NavLink className={"header-link hover:underline text-xl"} to={"/"}>
-                Home
-              </NavLink>
-              <NavLink className={"header-link hover:underline text-xl"} to={"/recipes"}>
-                Recipes
-              </NavLink>
-              <NavLink className={"header-link hover:underline text-xl"} to={"/users"}>
-                Users
-              </NavLink>
-              <NavLink className={"header-link hover:underline text-xl"} to={"/posts"}>
-                Posts
-              </NavLink>
-              <NavLink className={"header-link hover:underline text-xl"} to={"/login"}>
-                Login
-              </NavLink>
-            </div>
-          </div>
-
           <button className="text-2xl cursor-pointer">🌙</button>
         </div>
         <div>

@@ -41,4 +41,4 @@ const Faol = () => {
   )
 }
 
-export default Faol
+export default React.memo(Faol)

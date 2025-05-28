@@ -6,4 +6,4 @@ const Dokon = () => {
   )
 }
 
-export default Dokon
+export default React.memo(Dokon)

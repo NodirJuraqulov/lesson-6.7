@@ -1,99 +1,47 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Users = ({ data }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="rounded-lg mt-8 w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="rounded-lg mt-8 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {data?.map((item) => (
         <div
           key={item.id}
           className="bg-gray-300 rounded-lg p-4 flex flex-col items-center w-full"
         >
-          <div className="w-40 h-40 bg-slate-900 rounded-full">
+          <div className="w-32 h-32 bg-slate-900 rounded-full relative overflow-hidden">
             <img
+              onClick={() => navigate(`/user/${item.id}`)}
+              style={{ cursor: "pointer" }}
               loading="lazy"
-              src={item.image}
-              alt={item.firstName}
+              src=""
+              alt=""
               className="w-full h-full object-cover rounded-full"
             />
+            <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0 font-bold text-white text-5xl">
+              {item.name.firstname.charAt(0).toUpperCase()}
+              {item.name.lastname.charAt(0).toUpperCase()}
+            </p>
           </div>
 
-          <h2 className="text-3xl my-3 font-medium">
-            {item.firstName} {item.lastName}
+          <h2 className="text-4xl my-3 font-medium">
+            {item.name.firstname.charAt(0).toUpperCase() +
+              item.name.firstname.slice(1)}{" "}
+            {item.name.lastname.charAt(0).toUpperCase() +
+              item.name.lastname.slice(1)}
           </h2>
 
-          <div className="grid grid-cols-2 w-full gap-6 items-start">
-            <div className="ml-5">
-              <h4 className="text-lg font-medium mb-2">PersonalInfo:</h4>
-              <ul className="ml-5 list-disc">
-                <li>
-                  <p className="text-md trancate w-[165px] overflow-hidden mb-2 text-slate-900">
-                    BirthDate: {item.birthDate}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">Age: {item.age}</p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    Gender: {item.gender}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    BloodGroup: {item.bloodGroup}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    Height: {item.height}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    Weight: {item.weight}
-                  </p>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <p className="text-xl text-gray-900"><span className="text-black font-medium">Email:</span> {item.email}</p>
+            <p className="text-xl text-gray-900"><span className="text-black font-medium">Phone:</span> {item.phone}</p>
+          </div>
 
-            <div>
-              <h4 className="text-lg font-medium mb-2">Address:</h4>
-              <ul className="ml-5 list-disc">
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    {item.address.address}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    {item.address.city}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    {item.address.state}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    {item.address.postalCode}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">
-                    {item.address.country}
-                  </p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 text-slate-900">{item.phone}</p>
-                </li>
-                <li>
-                  <p className="text-md mb-2 trancate w-[160px] overflow-hidden text-slate-900">
-                    {item.email}
-                  </p>
-                </li>
-              </ul>
-            </div>
+          <div className="mt-4">
+            <h3 className="text-2xl font-medium">Address:</h3>
+            <p className="text-xl text-gray-900 ml-4"><span className="text-black font-medium">City:</span> {item.address.city}</p>
+            <p className="text-xl text-gray-900 ml-4"><span className="text-black font-medium">Street:</span> {item.address.street}</p>
           </div>
         </div>
       ))}
