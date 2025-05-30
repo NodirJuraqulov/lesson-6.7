@@ -4,6 +4,7 @@ import { Suspense } from '../utils'
 const Login = lazy(() => import('./login/Login'))
 const Layout = lazy(() => import('./layout/Layout'))
 const Home = lazy(() => import('./home/Home'))
+const Liked = lazy(() => import('./liked/Liked'))
 const NotFound = lazy(() => import('./not-found/NotFound'))
 const Users = lazy(() => import('./users/Users'))
 const ProductDetail = lazy(() => import('./product-detail/ProductDetail'))
@@ -29,6 +30,7 @@ const MainRouters = () => {
       <Routes>
         <Route path="/" element={ <Suspense> <Layout /> </Suspense> }>
           <Route path="/" element={ <Suspense> <Home /> </Suspense> } />
+          <Route path="/liked" element={ <Suspense> <Liked /> </Suspense> } />
           <Route path="/product/:id" element={ <Suspense> <ProductDetail /> </Suspense> } />
           <Route path="/user/:id" element={ <Suspense> <UserDetail /> </Suspense> } />
           <Route path="/users" element={<Users />} />

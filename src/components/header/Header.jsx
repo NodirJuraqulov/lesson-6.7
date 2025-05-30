@@ -18,6 +18,9 @@ const Header = () => {
             <NavLink className={"header-link text-xl"} to={"/"}>
               Home
             </NavLink>
+            <NavLink className={"header-link text-xl"} to={"/liked"}>
+              Liked
+            </NavLink>
             <NavLink className={"header-link text-xl"} to={"/users"}>
               Users
             </NavLink>

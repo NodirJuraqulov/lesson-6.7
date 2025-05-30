@@ -3,7 +3,7 @@ import NotFound from '../not-found/NotFound'
 import Skeleton from '../skeleton/Skeleton'
 import Products from '../../components/products/Products'
 import Hero from '../hero/Hero'
-import { useFetch } from '../../hooks/useFetch'
+import { useFetch } from '@/hooks/useFetch'
 
 const Home = () => {
     const { data, error, loading } = useFetch('/products')

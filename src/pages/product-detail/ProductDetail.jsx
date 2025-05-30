@@ -27,7 +27,7 @@ const ProductDetail = () => {
             <img
               src={data?.image}
               alt=""
-              className="w-full h-full object-cover rounded-2xl cursor-pointer"
+              className="w-full h-full object-contain rounded-2xl cursor-pointer"
             />
         </div>
 
