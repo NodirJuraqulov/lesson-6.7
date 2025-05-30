@@ -25,7 +25,7 @@ const Products = ({ data }) => {
               className="w-full object-contain h-80 bg-white rounded-md"
             />
             <div className="absolute top-2 right-2 text-black text-3xl rounded-full p-2 cursor-pointer active:text-red-600 hover:scale-105 transition-colors duration-300">
-              <button onClick={() => dispatch({type: "LIKED", payload: item})} className="cursor-pointer"><AiFillHeart /></button>
+              <button onClick={() => dispatch({type: "LIKED", payload: item})} className="cursor-pointer"><FaRegHeart /></button>
             </div>
           </div>
           <h2 className="text-3xl truncate my-2 font-medium" title={item.title}>{item.title}</h2>
