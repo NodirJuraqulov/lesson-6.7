@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
+import { AiFillHeart } from 'react-icons/ai';
 import { useContextValue } from "@/context";
 
 const Products = ({ data }) => {
@@ -24,7 +25,7 @@ const Products = ({ data }) => {
               className="w-full object-contain h-80 bg-white rounded-md"
             />
             <div className="absolute top-2 right-2 text-black text-3xl rounded-full p-2 cursor-pointer active:text-red-600 hover:scale-105 transition-colors duration-300">
-              <button onClick={() => dispatch({type: "LIKED", payload: item})} className="cursor-pointer"><FaRegHeart /></button>
+              <button onClick={() => dispatch({type: "LIKED", payload: item})} className="cursor-pointer"><AiFillHeart /></button>
             </div>
           </div>
           <h2 className="text-3xl truncate my-2 font-medium" title={item.title}>{item.title}</h2>
